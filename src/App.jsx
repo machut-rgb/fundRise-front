@@ -15,21 +15,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import "./style.css";
 
 export default function App() {
-  const [page, setPage] = useState('landing');
-  const nav = (p) => setPage(p);
-
-  const pages = {
-    landing: <LandingPage nav={nav} />,
-    login: <LoginPage nav={nav} />,
-    register: <RegisterPage nav={nav} />,
-    admin: <AdminDashboard nav={nav} />,
-    owner: <OwnerDashboard nav={nav} />,
-    contributor: <ContributorDashboard nav={nav} />,
-    'project-view': <ProjectView nav={nav} />,
-    'create-project': <CreateProject nav={nav} />,
-    deposit: <DepositPage nav={nav} />,
-  };
-
+  
   return (
     <BrowserRouter>
       <Routes>
